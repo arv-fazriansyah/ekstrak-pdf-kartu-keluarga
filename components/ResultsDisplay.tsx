@@ -19,7 +19,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ data }) => {
         <thead className="bg-zinc-700/30">
           <tr>
             {columns.map(col => (
-              <th key={col} scope="col" className="px-2 py-2 text-left text-[10px] font-medium text-text-secondary uppercase tracking-wider whitespace-nowrap sm:px-4 sm:py-3 sm:text-xs">
+              <th key={col} scope="col" className="px-2 py-2 text-center text-[10px] font-medium text-text-secondary uppercase tracking-wider whitespace-nowrap sm:px-4 sm:py-3 sm:text-xs">
                 {col}
               </th>
             ))}

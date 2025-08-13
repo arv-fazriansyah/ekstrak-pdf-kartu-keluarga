@@ -3,11 +3,11 @@ import JSZip from 'jszip';
 import type { ExtractedFile, ChildData, LoadingState } from '../types';
 import { CHILD_DATA_COLUMNS } from '../types';
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable is not set.");
+if (!import.meta.env.VITE_GEMINI_API_KEY) {
+  throw new Error("VITE_GEMINI_API_KEY environment variable is not set.");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const RESPONSE_SCHEMA = {
   type: Type.ARRAY,
