@@ -65,14 +65,14 @@ export default function ResultsDisplay({ data }: ResultsDisplayProps): React.Rea
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`whitespace-nowrap py-2 px-4 rounded-full font-medium text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface focus:ring-primary
+              className={`whitespace-nowrap py-1 px-3 rounded-full font-medium text-xs transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface focus:ring-primary
                 ${activeTab === index 
                   ? 'bg-primary text-white shadow-lg' 
                   : 'text-text-primary border border-zinc-600 hover:bg-zinc-700'
                 }`}
             >
               {file.fileName} 
-              <span className={`text-xs rounded-full px-2 py-0.5 ml-2 ${activeTab === index ? 'bg-white/20 text-white' : 'bg-zinc-600/80 text-zinc-300'}`}>
+              <span className={`text-xs rounded-full px-1.5 py-0.5 ml-1 ${activeTab === index ? 'bg-white/20 text-white' : 'bg-zinc-600/80 text-zinc-300'}`}>
                 {file.data.length}
               </span>
             </button>
