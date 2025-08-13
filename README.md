@@ -44,7 +44,7 @@ Aplikasi ini membutuhkan API Key dari Google Gemini.
 - Buat file baru di direktori utama proyek dengan nama `.env.local`.
 - Buka file `.env.local` dan tambahkan baris berikut, ganti `'''YOUR_API_KEY'''` dengan API key Anda yang sebenarnya:
   ```
-  VITE_GEMINI_API_KEY=YOUR_API_KEY
+  GEMINI_API_KEY=YOUR_API_KEY
   ```
 - Anda bisa mendapatkan API Key dari [Google AI Studio](https://aistudio.google.com/app/apikey).
 
