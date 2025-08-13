@@ -62,3 +62,46 @@ Aplikasi akan tersedia di `http://localhost:5173` (atau port lain jika 5173 suda
 3. **Mulai Ekstraksi**: Setelah file dipilih, klik tombol "Ekstrak Data".
 4. **Lihat Hasil**: Tunggu proses ekstraksi selesai. Hasil akan ditampilkan dalam bentuk tabel. Jika Anda mengunggah beberapa file, Anda bisa berpindah antar hasil menggunakan tombol tab di atas tabel.
 5. **Unduh Excel**: Klik tombol "Unduh Excel" untuk menyimpan semua data dari semua file yang berhasil diekstrak ke dalam satu file spreadsheet.
+
+## 🚀 Deploy ke Cloudflare Pages
+
+Aplikasi ini dapat dengan mudah di-deploy ke [Cloudflare Pages](https://pages.cloudflare.com/) untuk hosting gratis, cepat, dan global.
+
+### Metode 1: Integrasi dengan Git (Disarankan)
+
+Ini adalah cara terbaik untuk deploy secara otomatis setiap kali ada perubahan pada kode Anda.
+
+1.  **Push Kode ke GitHub**: Pastikan semua kode terbaru Anda sudah ada di repository GitHub.
+2.  **Buat Proyek di Cloudflare Pages**:
+    - Login ke dashboard Cloudflare Anda.
+    - Pergi ke `Workers & Pages` > `Create application` > `Pages` > `Connect to Git`.
+    - Pilih repository GitHub Anda (`arv-fazriansyah/ekstrak-pdf-kartu-keluarga`).
+3.  **Konfigurasi Build Settings**:
+    - **Production branch**: `main`
+    - **Framework preset**: `Vite`
+    - **Build command**: `npm run build`
+    - **Build output directory**: `dist`
+4.  **Tambahkan Environment Variable**:
+    - Pergi ke `Settings` > `Environment variables`.
+    - Tambahkan variabel berikut:
+      - **Variable name**: `GEMINI_API_KEY`
+      - **Value**: Masukkan API Key Google Gemini Anda.
+5.  **Save and Deploy**: Klik "Save and Deploy". Cloudflare akan secara otomatis membangun dan men-deploy aplikasi Anda.
+
+### Metode 2: Deploy Manual dengan Wrangler CLI
+
+Jika Anda ingin melakukan deploy langsung dari komputer Anda tanpa menghubungkan Git.
+
+1.  **Build Aplikasi Secara Lokal**:
+    ```bash
+    npm run build
+    ```
+    Perintah ini akan membuat folder `dist` yang berisi semua file statis aplikasi Anda.
+
+2.  **Deploy Menggunakan Wrangler**:
+    - Pastikan Anda sudah login ke Wrangler (`npx wrangler login`).
+    - Jalankan perintah berikut di terminal Anda:
+    ```bash
+    npx wrangler pages deploy dist
+    ```
+    Wrangler akan mengunggah folder `dist` dan memberikan Anda URL aplikasi yang sudah live. Jangan lupa untuk mengatur Environment Variable `GEMINI_API_KEY` di dashboard Cloudflare seperti yang dijelaskan di metode sebelumnya.
