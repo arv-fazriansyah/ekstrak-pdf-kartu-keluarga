@@ -1,3 +1,4 @@
+![Demo](https://github.com/arv-fazriansyah/ocr-gemini-ai-api/raw/main/img/demo2.png)
 # Ekstraktor Data Kartu Keluarga
 
 Aplikasi web untuk mengekstrak data secara otomatis dari file Kartu Keluarga (KK) Indonesia menggunakan Google Gemini. Cukup unggah file PDF atau ZIP yang berisi PDF, dan aplikasi akan mem-parsing data anak beserta data orang tua dan alamat, lalu menyajikannya dalam format tabel yang dapat diunduh sebagai file Excel.
