@@ -1,0 +1,5 @@
+{
+  "name": "Ekstraktor Data Kartu Keluarga",
+  "description": "A web application to automatically extract family member data with 'Child' status from Indonesian Family Card (Kartu Keluarga) documents (.pdf or .zip).",
+  "requestFramePermissions": []
+}
