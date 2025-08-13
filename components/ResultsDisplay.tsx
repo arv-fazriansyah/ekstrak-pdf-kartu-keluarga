@@ -68,7 +68,7 @@ export default function ResultsDisplay({ data }: ResultsDisplayProps): React.Rea
               className={`whitespace-nowrap py-2 px-4 rounded-full font-medium text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface focus:ring-primary
                 ${activeTab === index 
                   ? 'bg-primary text-white shadow-lg' 
-                  : 'text-text-secondary bg-surface/50 hover:bg-surface hover:text-text-primary'
+                  : 'text-text-primary border border-zinc-600 hover:bg-zinc-700'
                 }`}
             >
               {file.fileName} 
